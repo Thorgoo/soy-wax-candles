@@ -1,0 +1,18 @@
+<header class="header">
+  <nav class="nav container">
+    <a routerLink="/" class="brand">Handmade Soy Wax Candles</a>
+    <div class="spacer"></div>
+    <a routerLink="/cart" class="cart-link">
+      🛒 Cart
+      <span class="badge" *ngIf="cart.totalQuantity() as qty">{{ qty }}</span>
+    </a>
+  </nav>
+</header>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer container">
+  <p>&copy; {{ currentYear }} Crafted with love, hand-poured by my wife.</p>
+</footer>

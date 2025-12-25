@@ -1,0 +1,13 @@
+h1 { margin-top: 24px; }
+.subtitle { color: #666; margin-bottom: 16px; }
+.loading { padding: 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.image-wrap { display: block; aspect-ratio: 4/3; overflow: hidden; }
+img { width: 100%; height: 100%; object-fit: cover; }
+.content { padding: 12px; }
+.price { font-weight: 700; margin: 4px 0 8px; }
+actions { display: flex; gap: 8px; margin-top: 8px; }
+.btn { background: #2d6a4f; color: #fff; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.btn.outline { background: transparent; color: #2d6a4f; border: 1px solid #2d6a4f; }
+.btn:hover { opacity: 0.9; }

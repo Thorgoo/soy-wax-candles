@@ -1,0 +1,42 @@
+<h1>Your Cart</h1>
+
+<div *ngIf="cart.items().length === 0" class="empty">
+  Your cart is empty.
+  <a routerLink="/" class="btn outline">Browse candles</a>
+</div>
+
+<table *ngIf="cart.items().length > 0" class="cart-table">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Subtotal</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cart.items(); trackBy: trackById">
+      <td>
+        <a [routerLink]="['/product', item.product.id]">{{ item.product.name }}</a>
+      </td>
+      <td>
+        <input type="number" min="1" [value]="item.quantity"
+               (change)="onQuantityChange(item.product.id, $event)">
+      </td>
+      <td>{{ item.product.price | currency }}</td>
+      <td>{{ (item.product.price * item.quantity) | currency }}</td>
+      <td>
+        <button class="link" (click)="cart.remove(item.product.id)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="cart.items().length > 0" class="summary">
+  <div>Total: <strong>{{ cart.totalPrice() | currency }}</strong></div>
+  <div class="actions">
+    <button class="btn outline" (click)="cart.clear()">Clear Cart</button>
+    <a routerLink="/checkout" class="btn">Proceed to Checkout</a>
+  </div>
+</div>

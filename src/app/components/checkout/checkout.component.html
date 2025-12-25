@@ -1,0 +1,38 @@
+<h1>Checkout</h1>
+
+<div *ngIf="cart.items().length === 0 && !orderPlaced" class="empty">
+  Your cart is empty. <a routerLink="/" class="btn outline">Browse candles</a>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="placeOrder()" *ngIf="cart.items().length > 0 && !orderPlaced" class="form">
+  <div class="grid">
+    <label>
+      Name
+      <input formControlName="name" placeholder="Your name" />
+    </label>
+    <label>
+      Email
+      <input formControlName="email" placeholder="you@example.com" />
+    </label>
+    <label class="full">
+      Address
+      <textarea formControlName="address" rows="3" placeholder="Shipping address"></textarea>
+    </label>
+    <label class="full">
+      Notes (optional)
+      <textarea formControlName="notes" rows="3" placeholder="Gift message, delivery notes..."></textarea>
+    </label>
+  </div>
+
+  <div class="summary">
+    <div>Total: <strong>{{ cart.totalPrice() | currency }}</strong></div>
+    <button class="btn" [disabled]="placing || form.invalid">Place Order</button>
+  </div>
+
+  <div *ngIf="placing" class="placing">Placing your order...</div>
+</form>
+
+<div *ngIf="orderPlaced" class="success">
+  ✅ Thank you! Your order has been received. We'll reach out by email to confirm shipping.
+  <a routerLink="/" class="btn outline">Back to shop</a>
+</div>
