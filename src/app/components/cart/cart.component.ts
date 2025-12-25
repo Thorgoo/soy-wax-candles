@@ -15,7 +15,10 @@ export class CartComponent {
   trackById = (_: number, item: any) => item.product.id;
   
   onQuantityChange(productId: string, event: Event) {
-    const value = (event.target as HTMLInputElement).value;
-    this.cart.updateQuantity(productId, +value);
+    const input = event.target as HTMLInputElement;
+    const value = parseInt(input.value, 10);
+    if (!isNaN(value) && value > 0) {
+      this.cart.updateQuantity(productId, value);
+    }
   }
 }
