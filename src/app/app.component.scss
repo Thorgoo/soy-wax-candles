@@ -1,0 +1,46 @@
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+.spacer { flex: 1; }
+
+.cart-link { text-decoration: none; color: #2d2d2d; position: relative; }
+
+.badge {
+  background: #2d6a4f;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.footer {
+  margin-top: 48px;
+  padding: 24px 0;
+  color: #666;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}

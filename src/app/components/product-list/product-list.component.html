@@ -1,0 +1,24 @@
+<section>
+  <h1>Handmade Soy Wax Candles</h1>
+  <p class="subtitle">Small-batch, hand-poured with love.</p>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+
+  <div class="grid" *ngIf="!loading">
+    <article class="card" *ngFor="let p of products">
+      <a [routerLink]="['/product', p.id]" class="image-wrap">
+        <img [src]="p.imageUrl" [alt]="p.name" loading="lazy" />
+      </a>
+      <div class="content">
+        <h3>{{ p.name }}</h3>
+        <p class="price">{{ p.price | currency }}</p>
+        <p class="sizes">Size: {{ p.size }}</p>
+        <p class="scents">Scents: {{ p.scents.join(', ') }}</p>
+        <div class="actions">
+          <a [routerLink]="['/product', p.id]" class="btn outline">View</a>
+          <button class="btn" (click)="addToCart(p)">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

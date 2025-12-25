@@ -1,0 +1,10 @@
+.back { display: inline-block; margin: 16px 0; text-decoration: none; }
+.detail { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.image img { width: 100%; border-radius: 8px; }
+.price { font-size: 20px; font-weight: 700; }
+.meta { color: #666; }
+.desc { margin: 12px 0 20px; }
+.actions { display: flex; gap: 8px; }
+.btn { background: #2d6a4f; color: #fff; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.btn.outline { background: transparent; color: #2d6a4f; border: 1px solid #2d6a4f; }
+@media (max-width: 860px) { .detail { grid-template-columns: 1fr; } }

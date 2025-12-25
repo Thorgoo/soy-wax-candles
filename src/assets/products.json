@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lavender-8oz",
+    "name": "Lavender Calm (8oz)",
+    "description": "Hand-poured soy wax candle with soothing lavender essential oil.",
+    "price": 14.99,
+    "imageUrl": "assets/images/lavender.jpg",
+    "size": "8oz",
+    "scents": ["Lavender"],
+    "inStock": true
+  },
+  {
+    "id": "vanilla-12oz",
+    "name": "Warm Vanilla (12oz)",
+    "description": "Cozy vanilla bean fragrance in a clean-burning soy wax.",
+    "price": 19.99,
+    "imageUrl": "assets/images/vanilla.jpg",
+    "size": "12oz",
+    "scents": ["Vanilla"],
+    "inStock": true
+  },
+  {
+    "id": "citrus-8oz",
+    "name": "Citrus Sunshine (8oz)",
+    "description": "Bright blend of orange and lemon for a fresh, uplifting aroma.",
+    "price": 14.99,
+    "imageUrl": "assets/images/citrus.jpg",
+    "size": "8oz",
+    "scents": ["Orange", "Lemon"],
+    "inStock": true
+  },
+  {
+    "id": "seasonal-10oz",
+    "name": "Seasonal Special (10oz)",
+    "description": "Small-batch seasonal scent, limited availability.",
+    "price": 17.99,
+    "imageUrl": "assets/images/seasonal.jpg",
+    "size": "10oz",
+    "scents": ["Seasonal"],
+    "inStock": true
+  }
+]

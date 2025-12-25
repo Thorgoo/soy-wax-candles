@@ -1,0 +1,10 @@
+.form { margin-top: 12px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.full { grid-column: 1 / -1; }
+input, textarea { border: 1px solid #ddd; border-radius: 6px; padding: 8px; }
+.summary { margin-top: 16px; display: flex; align-items: center; gap: 12px; }
+.btn { background: #2d6a4f; color: #fff; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.btn[disabled] { opacity: 0.6; cursor: default; }
+.placing, .success { margin-top: 16px; }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
