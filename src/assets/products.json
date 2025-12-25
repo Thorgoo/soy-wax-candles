@@ -38,5 +38,25 @@
     "size": "10oz",
     "scents": ["Seasonal"],
     "inStock": true
+  },
+  {
+    "id": "eucalyptus-8oz",
+    "name": "Eucalyptus Mint (8oz)",
+    "description": "Refreshing eucalyptus and mint blend for a spa-like atmosphere.",
+    "price": 14.99,
+    "imageUrl": "assets/images/eucalyptus.jpg",
+    "size": "8oz",
+    "scents": ["Eucalyptus", "Mint"],
+    "inStock": true
+  },
+  {
+    "id": "cinnamon-12oz",
+    "name": "Cinnamon Spice (12oz)",
+    "description": "Warm cinnamon and spice notes perfect for cozy evenings.",
+    "price": 19.99,
+    "imageUrl": "assets/images/cinnamon.jpg",
+    "size": "12oz",
+    "scents": ["Cinnamon", "Spice"],
+    "inStock": true
   }
 ]
