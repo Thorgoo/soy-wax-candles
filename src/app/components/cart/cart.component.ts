@@ -10,4 +10,12 @@ import { RouterLink } from '@angular/router';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
 })
-export class CartComponent { constructor(public cart: CartService) {}  trackById = (_: number, item: any) => item.product.id; }
+export class CartComponent { 
+  constructor(public cart: CartService) {}  
+  trackById = (_: number, item: any) => item.product.id;
+  
+  onQuantityChange(productId: string, event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.cart.updateQuantity(productId, +value);
+  }
+}

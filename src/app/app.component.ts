@@ -11,5 +11,6 @@ import { AsyncPipe, NgIf } from '@angular/common';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  currentYear = new Date().getFullYear();
   constructor(public cart: CartService) {}
 }

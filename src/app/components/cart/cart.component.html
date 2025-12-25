@@ -22,7 +22,7 @@
       </td>
       <td>
         <input type="number" min="1" [value]="item.quantity"
-               (change)="cart.updateQuantity(item.product.id, +($event.target as HTMLInputElement).value)">
+               (change)="onQuantityChange(item.product.id, $event)">
       </td>
       <td>{{ item.product.price | currency }}</td>
       <td>{{ (item.product.price * item.quantity) | currency }}</td>
