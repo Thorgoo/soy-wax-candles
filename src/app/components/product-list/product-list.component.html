@@ -1,24 +1,38 @@
 <section>
-  <h1>Handmade Soy Wax Candles</h1>
-  <p class="subtitle">Small-batch, hand-poured with love.</p>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>✨ Handmade Soy Wax Candles ✨</h1>
+    <p class="hero-subtitle">Small-batch, hand-poured with love. Natural scents that transform your space.</p>
+    <div class="hero-features">
+      <span class="feature">🌿 100% Natural Soy Wax</span>
+      <span class="feature">🕯️ Hand-Poured</span>
+      <span class="feature">🎁 Perfect Gifts</span>
+    </div>
+  </div>
 
-  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="loading" class="loading">Loading our beautiful candles...</div>
 
-  <div class="grid" *ngIf="!loading">
-    <article class="card" *ngFor="let p of products">
-      <a [routerLink]="['/product', p.id]" class="image-wrap">
-        <img [src]="p.imageUrl" [alt]="p.name" loading="lazy" />
-      </a>
-      <div class="content">
-        <h3>{{ p.name }}</h3>
-        <p class="price">{{ p.price | currency }}</p>
-        <p class="sizes">Size: {{ p.size }}</p>
-        <p class="scents">Scents: {{ p.scents.join(', ') }}</p>
-        <div class="actions">
-          <a [routerLink]="['/product', p.id]" class="btn outline">View</a>
-          <button class="btn" (click)="addToCart(p)">Add to Cart</button>
+  <div class="products-section" *ngIf="!loading">
+    <h2 class="section-title">Our Collection</h2>
+    <div class="grid">
+      <article class="card" *ngFor="let p of products">
+        <a [routerLink]="['/product', p.id]" class="image-wrap">
+          <img [src]="p.imageUrl" [alt]="p.name" loading="lazy" />
+        </a>
+        <div class="content">
+          <h3>{{ p.name }}</h3>
+          <p class="price">{{ p.price | currency }}</p>
+          <div class="meta">
+            <span class="meta-item">📏 {{ p.size }}</span>
+            <span class="meta-item">🌸 {{ p.scents.join(', ') }}</span>
+          </div>
+          <p class="description">{{ p.description }}</p>
+          <div class="actions">
+            <button class="btn primary" (click)="addToCart(p)">Add to Cart</button>
+            <a [routerLink]="['/product', p.id]" class="btn outline">View Details</a>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </div>
 </section>
